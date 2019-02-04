@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  # STEP 1: A ROUTE triggers a controller action
-  # verb "/urls" => "namespace/controllers#action"
+  namespace :api do
+  	get "/spotify_authorize" => "spotify#spotify_authorize"
+  	get "/spotify/callback" => "spotify#spotify_callback"
+  end
 end
